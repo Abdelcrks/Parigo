@@ -1,8 +1,9 @@
 import { useState } from "react";
 import React from "react";
+import ButtonSwitch from "./ButtonSwitch";
 
 
-export const Cards = ({ item }) => {
+export const Cards = ({ item, isFavorite, onToggleFavorite }) => {
     const [seeMore, setSeeMore] = useState(false)
 
     const fullDescription = (item.description)?.replace(/<[^>]*>/g, '') || "" // texte complet sans balise sémantique , ou fallback vide
@@ -58,7 +59,12 @@ export const Cards = ({ item }) => {
             {seeMore ? "Voir moins" : "Voir plus"}
           </button>
         )}
-        <button onClick={() => {console.log("id de l'evenement #",item.id)}}>Favoris</button>
+        <ButtonSwitch 
+        checked={isFavorite} 
+        onChange={() => onToggleFavorite(item.id)} 
+        unchechedLabel ="Ajouter au Favoris" 
+        checkedlabel="Retirer des favoris">
+        </ButtonSwitch>
       </div>
     </div>
   </div>
