@@ -18,7 +18,7 @@ export const Cards = ({ item, isFavorite, onToggleFavorite }) => {
 <article className="m-10">
   <div
     className="
-      group flex flex-col items-center rounded-xl border shadow-sm
+      group/card flex flex-col items-center rounded-xl border shadow-sm
       bg-white/15 backdrop-blur-md border-white/10
       md:flex-row md:max-w-3xl
       hover:bg-white/25 transition
@@ -61,7 +61,7 @@ export const Cards = ({ item, isFavorite, onToggleFavorite }) => {
             {seeMore ? "Voir moins" : "Voir plus"}
           </Button>
         )}
-        
+
         <ButtonSwitch 
         checked={isFavorite} 
         onChange={() => onToggleFavorite(item.id)} 
