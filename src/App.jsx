@@ -2,14 +2,14 @@ import { useState } from 'react'
 import './App.css'
 import { Events } from './components/Events'
 import { Background } from './components/Background'
-import { ThemeToggle } from './components/ThemeToggle'
+import { Switch } from './components/Switch'
 
 function App() {
 
   return (
     <div className="relative min-h-screen">
       <Background/>      
-        <ThemeToggle/>     
+        <Switch/>     
   <Events></Events>
     </div>
 )
