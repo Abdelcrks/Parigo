@@ -4,7 +4,6 @@ import Button from "./Button.jsx";
 
 export const SearchBar = ({ query, onChangeQuery, onSubmit}) => {
     return (
-        // <div className="px-10 m-10 p-20 bg-cover rounded-xl shadow-xl ">
 
 
         <form onSubmit={(e) => {
@@ -37,7 +36,8 @@ export const SearchBar = ({ query, onChangeQuery, onSubmit}) => {
                     className="
                 w-full bg-transparent outline-none
                 text-zinc-900 dark:text-zinc-100
-                placeholder:text-zinc-400"
+                placeholder:text-zinc-500
+                dark:placeholder:text-white"
                 />
                 <Button />
             </div>
