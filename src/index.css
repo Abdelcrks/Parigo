@@ -19,7 +19,7 @@
 a {
   font-weight: 500;
 
-  text-decoration: inherit;
+  /* text-decoration: inherit; */
 }
 
 
@@ -37,11 +37,11 @@ h1 {
 }
 
 
-
+/* 
  
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 
