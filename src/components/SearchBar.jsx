@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import Button from "./Button.jsx";
+import ButtonSearch from "./ButtonSearch.jsx";
 
 export const SearchBar = ({ query, onChangeQuery, onSubmit}) => {
     return (
@@ -39,7 +39,7 @@ export const SearchBar = ({ query, onChangeQuery, onSubmit}) => {
                 placeholder:text-zinc-500
                 dark:placeholder:text-white"
                 />
-                <Button />
+                <ButtonSearch />
             </div>
         </form>
 
