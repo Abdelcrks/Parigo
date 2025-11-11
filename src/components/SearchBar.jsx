@@ -18,8 +18,8 @@ export const SearchBar = ({ query, onChangeQuery, onSubmit}) => {
                 bg-white/80 dark:bg-zinc-900/60
                 ring-1 ring-zinc-300 dark:ring-zinc-700
                 focus-within:ring-2 focus-within:ring-indigo-500
-                shadow-sm backdrop-blur dark:bg-gray-50 dark:border-gray-50
-            ">
+                shadow-sm backdrop-blur dark:border-gray-50
+                ">
 
                 <svg
                     viewBox="0 0 24 24" aria-hidden="true"
