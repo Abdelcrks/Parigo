@@ -4,17 +4,19 @@ import { SearchBar } from "./SearchBar";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 
+
 export const Events =  () => {
     const [events, setEvents] = useState([])
     const [offset, setOffset] = useState(0)
 
     const [favorites, setFavorites] = useLocalStorage("favorites", [])
-    // const [isFavorites, setIsFavorites] = 
     
     const [query, setQuery] = useState("") // filtre local
     const [queryApi, setQueryApi] = useState("") // filtre api
     const limit = 5
     
+
+
 
     const fetchEvent = async () => {
         // const queryUrl = queryApi ? `&where=${encodeURIComponent(`title like '%${queryApi}%'`)}` : "";
@@ -51,6 +53,20 @@ const onSubmitSearch = () => {
     setQueryApi(query) // active recherche api
 }
 
+const saveFavorites = (next) => {
+    setFavorites(next);
+    try {
+      localStorage.setItem("paris-events:favorites", JSON.stringify(next));
+    } catch (e) {
+      console.error("Erreur localStorage favoris :", e);
+    }
+  };
+
+  const toggleFavorite = (id) => {
+    saveFavorites((prev) =>
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+    );
+  };
 
 return (
     <div>
@@ -62,9 +78,18 @@ return (
               onSubmit={onSubmitSearch}
         />
         </div>
-        {searchEvents.length === 0 ?<div>⌛️ Chargement</div> : searchEvents.map((item)=>{return(<Cards key={item.id} item={item}></Cards>)})}
+        {searchEvents.length === 0 ?<div>⌛️ Chargement</div> : searchEvents.map((item)=>(
+        <Cards 
+        key={item.id} 
+        item={item} 
+        isFavorite={favorites.includes(item.id)}
+        onToggleFavorite={toggleFavorite}
+        ></Cards>))}
         {/* si la taille = à zero charge sinon boucle(map) condition === 0 if div charg else :  */}
         <button onClick={loadMore} 
         >Voir Plus</button>
     </div>
 )}
+
+
+// {searchEvents.length === 0 ?<div>⌛️ Chargement</div> : searchEvents.map((item)=>{return(<Cards key={item.id} item={item} isFavorite={favorites.includes(item.id)onToggleFavorite={toggleFavorite}}></Cards>)})}
