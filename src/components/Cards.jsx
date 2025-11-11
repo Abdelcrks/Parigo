@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import ButtonSwitch from "./ButtonSwitch";
+import { Button } from "./Button";
 
 
 export const Cards = ({ item, isFavorite, onToggleFavorite }) => {
@@ -47,18 +48,20 @@ export const Cards = ({ item, isFavorite, onToggleFavorite }) => {
 
       <div className="flex items-center gap-3 self-center">
         {isLong && (
-          <button
+          
+          <Button
             type="button"
             onClick={() => setSeeMore((p) => !p)}
             className="
               rounded-lg px-3 py-1.5
-              bg-emerald-500/90 hover:bg-emerald-500
+              bg-sky-950 hover:bg-emerald-500
               text-black
             "
           >
             {seeMore ? "Voir moins" : "Voir plus"}
-          </button>
+          </Button>
         )}
+        
         <ButtonSwitch 
         checked={isFavorite} 
         onChange={() => onToggleFavorite(item.id)} 
