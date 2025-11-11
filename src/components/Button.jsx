@@ -1,41 +1,17 @@
-import React from "react";
+import { useState,useEffect } from "react";
 
-const Button = () => {
+
+export const Button = () => {
+
   return (
-    <button
-      type="submit"
-      className="
-      group relative z-10 mx-auto flex items-center justify-center gap-5 text-blue-400
-      rounded-full border-2 border-gray-50 bg-gray-50 px-10 py-1 text-lg shadow-xl backdrop-blur-md lg:font-semibold
-      overflow-hidden isolation-auto transition hover:text-gray-50
-      before:absolute before:-left-full before:aspect-square before:w-full before:rounded-full before:bg-sky-500
-      before:transition-all before:duration-700 before:-z-10 before:content-[''] hover:before:left-0 hover:before:scale-150
-
-      dark:before:bg-sky-900 dark:text-blue-950
-      
-
-    "
-    
-    >
-      Rechercher
-      <svg
-        viewBox="0 0 16 19"
-        className="w-5 h-5  rotate-45 rounded-full border border-gray-700 flex-none
-                   duration-300 ease-linear
-                   text-gray-800 !group-hover:text-gray-800  
-                   group-hover:rotate-90 group-hover:bg-gray-50 group-hover:border-none"
-                   
-        aria-hidden="true"
-        focusable="false"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          className="fill-gray-800 group-hover:fill-gray-800"
-          d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-        />
-      </svg>
+    <button className="text-xl w-32 h-12 rounded-3xl bg-white text-blue-400 relative overflow-hidden group z-10 hover:text-white duration-300 cursor-pointer
+    dark:text-blue-950">
+      <span className="absolute bg-sky-400 w-36 h-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all
+      dark:bg-sky-800" />
+      <span className="absolute bg-sky-500 dark:bg-sky-950 w-36 h-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all" />
+      Voir Plus
     </button>
   );
-};
+}
 
-export default Button;
+
