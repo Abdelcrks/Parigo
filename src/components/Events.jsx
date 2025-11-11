@@ -13,7 +13,7 @@ export const Events =  () => {
     
     const [query, setQuery] = useState("") // filtre local
     const [queryApi, setQueryApi] = useState("") // filtre api
-    const limit = 5
+    const limit = 20
     
 
 
@@ -69,15 +69,18 @@ const saveFavorites = (next) => {
   };
 
 return (
-    <div>
-        <h1 className="m-10  dark:text-white" >Parigo</h1>
-        <div>
+    <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center  px-4 py-6 text-black " >
+        <div className=""><h1 className="m-10  dark:text-white" >Parigo</h1></div>
+        
+        <div className="mb-20">
         <SearchBar
               query={query}
               onChangeQuery={onChangeQuery}
               onSubmit={onSubmitSearch}
         />
         </div>
+        <div className="">
+        <div className="mt-4 grid w-full grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {searchEvents.length === 0 ?<div>⌛️ Chargement</div> : searchEvents.map((item)=>(
         <Cards 
         key={item.id} 
@@ -88,6 +91,8 @@ return (
         {/* si la taille = à zero charge sinon boucle(map) condition === 0 if div charg else :  */}
         <button onClick={loadMore} 
         >Voir Plus</button>
+        </div>
+        </div>
     </div>
 )}
 
