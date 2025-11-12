@@ -33,11 +33,12 @@ export const SearchBar = ({ query, onChangeQuery, onSubmit}) => {
                     value={query}
                     onChange={(e) => onChangeQuery(e.target.value)} // filtre local
                     placeholder="Rechercher (ex : tennis , 75010..)"
-                    className="
-                w-full bg-transparent outline-none
-                text-zinc-900 dark:text-zinc-100
-                placeholder:text-zinc-500
-                dark:placeholder:text-white"
+                    className="w-full pl-12 pr-32 
+                     outline-none focus:ring-2  focus:ring-primary focus:border-primary transition duration-200 
+                     text-zinc-900 dark:text-zinc-100
+                     placeholder:text-zinc-500
+                     dark:placeholder:text-white"
+                    // className="w-full pl-12 pr-32 py-4 bg-white/70 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300 dark:border-gray-700 rounded-full focus:ring-2 focus:ring-primary focus:border-primary transition duration-200 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white"
                 />
                 <ButtonSearch />
             </div>
@@ -50,3 +51,19 @@ export const SearchBar = ({ query, onChangeQuery, onSubmit}) => {
 
 
 
+
+
+
+{/* <input
+value={query}
+onChange={(e) => onChangeQuery(e.target.value)} // filtre local
+placeholder="Rechercher (ex : tennis , 75010..)"
+className="
+
+
+
+w-full bg-transparent outline-none
+text-zinc-900 dark:text-zinc-100
+placeholder:text-zinc-500
+dark:placeholder:text-white"
+/> */}

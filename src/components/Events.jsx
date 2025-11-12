@@ -69,7 +69,7 @@ const saveFavorites = (next) => {
   };
 
 return (
-    <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center  px-4 py-6 text-black " >
+    <div className="mx-auto flex min-h-screen w-full max-w-9xl flex-col items-center  px-4 py-6 text-black " >
         <div className=""><h1 className="m-10  dark:text-white" >Parigo</h1></div>
         
         <div className="mb-20">
@@ -80,7 +80,7 @@ return (
         />
         </div>
         <div className="">
-        <div className="mt-4 grid w-full grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-4 grid w-full grid-cols-5  sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
         {searchEvents.length === 0 ?<div>⌛️ Chargement</div> : searchEvents.map((item)=>(
         <Cards 
         key={item.id} 
