@@ -6,18 +6,22 @@ const ButtonSearch = () => {
       type="submit"
       className=" cursor-pointer
       group relative z-10 mx-auto flex items-center justify-center gap-5 text-blue-400
-      rounded-full border-2 border-gray-50 bg-gray-50 px-10 py-1 text-lg shadow-xl backdrop-blur-md lg:font-semibold
+      rounded-full border-2 border-gray-50 bg-gray-50 px-10 py-1 shadow-xl backdrop-blur-md lg:font-semibold
       overflow-hidden isolation-auto transition hover:text-gray-50
       before:absolute before:-left-full before:aspect-square before:w-full before:rounded-full before:bg-sky-500
       before:transition-all before:duration-700 before:-z-10 before:content-[''] hover:before:left-0 hover:before:scale-150
 
       dark:before:bg-sky-900 dark:text-blue-950
       
-
+      
+      lg:text-lg
+      sm:text-sm
+      
+      
     "
     
     >
-      Rechercher
+      Rechercher 
       <svg
         viewBox="0 0 16 19"
         className="w-5 h-5  rotate-45 rounded-full border border-gray-700 flex-none
