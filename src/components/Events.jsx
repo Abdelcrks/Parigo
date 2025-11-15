@@ -15,6 +15,8 @@ export const Events =  () => {
     const [queryApi, setQueryApi] = useState("") // filtre api
     const limit = 20
     
+    const [totalEvents,setTotalEvents] = useState(0)
+
 
 
 
@@ -28,6 +30,7 @@ export const Events =  () => {
         const response = await fetch(`https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records?limit=${limit}&offset=${offset}${queryUrl}`)
         const data = await response.json()
         console.log(data.results)
+        setTotalEvents(data.total_count || 0)
         if(events.length === 0){          
             setEvents(data.results)
         }
@@ -79,6 +82,7 @@ return (
               onChangeQuery={onChangeQuery}
               onSubmit={onSubmitSearch}
         />
+              <p className="text-xl mt-10 dark:text-white">{searchEvents.length} Evénements affichés sur {totalEvents}</p>
         </div>
         <div className="w-full">
         <div className="mt-4 grid w-full grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
