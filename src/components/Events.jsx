@@ -93,7 +93,7 @@ export const Events = () => {
             onChangeQuery={onChangeQuery}
             onSubmit={onSubmitSearch}
           />
-          <p className="text-xl mt-10 dark:text-white">{searchEvents.length} Evénements affichés sur {totalEvents}</p>
+          <p className="text-xl mt-11 dark:text-white">{searchEvents.length} Evénements affichés sur {totalEvents}</p>
         </div>
         <div className="w-full">
           <div className="mt-4 grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
