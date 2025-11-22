@@ -11,6 +11,12 @@ L'utilisateur peut :
 
 ---
 
+## 🌍 Démo en ligne
+
+🔗 Teste l’application ici : **[https://parigo.vercel.app](https://parigo.vercel.app/)**
+
+---
+
 ## 🚀 Stack Tech utilisée
 
 | Technologie | Rôle |
@@ -38,10 +44,8 @@ L'utilisateur peut :
 
 ### 📄 Pagination dynamique (API)
 - Affichage des événements par lots (`limit`)
-- Bouton voir plus
+- Bouton *Voir plus*
 - Utilisation du paramètre `offset` pour gérer le flux de données API
-
-
 
 
 
